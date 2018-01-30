@@ -3,7 +3,7 @@ FUC - Frequend used commands
 
 //PROMPT
 //port - proccess
-netstat -aon |find /i "8081"
+netstat -aon |find /i "8081"  
 or resmon.exe
 //delete all folders
 for /D %f in (folderName*) do rd /s /q "%f"
@@ -16,7 +16,7 @@ db
 show collections
 db.GameScore.find()
 db.users.remove({})
-mongodb://admin:admin@ds161164.mlab.com:61164/multivision	
+mongodb://admin:admin@ds161164.mlab.com:61164/multivision  	
 mongo mongodb://localhost/multivision
 	
 //GIT - basic
