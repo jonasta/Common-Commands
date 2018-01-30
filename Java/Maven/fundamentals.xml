@@ -1,0 +1,274 @@
+MAVEN FUNDAMENTALS
+	- build tool
+		- aways produces artifact (component, jar, war etc)
+		- manage dependencies
+		
+	- project management tool
+		- versions/releases
+		- describe project
+		- javadocs
+WHY?
+	- build for any environment
+	- dependencies are downloead with all it needs
+	- contains everything you need for your environment
+	- local repo
+	- IDE integration
+	- Jenkins/cruise/... integration
+	
+SEM IDE
+	- criar projeto simples, criar src/main/java/HelloWorld.java e pom.xml:
+		<project >
+			<groupId>com.example</groupId>
+			<artifactId>HelloWorld</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<modelVersion>4.0.0</modelVersion>
+			<packaging>jar</packaging>
+		</project>
+	- pom = Project Object Model
+	- baixar de maven.org.apache
+	- configurar variáveis de ambiente
+	- navegar até a pasta do projeto
+		mvn clean
+		mvn compile
+		gera o .class
+		"java HelloWorld" - roda a aplicação
+	- mvn package
+			gera o .jar (packaging está "jar" no pom.xml)
+			
+MAVEN STRUCTURE
+	- path
+		- src/main/java
+			./packages
+	- test path
+		- src/test/java
+		- Unity tests
+
+		./target
+			- where everything is compiled to
+	
+	- pom
+		- project information
+			- groupId
+			- artifactId
+			- version
+			- packaging
+		- dependencies			
+		- build
+			- plugins
+			- directory structure
+		- Repositories
+
+	DEPENDENCIES
+		<dependencies>
+			<dependency>
+				<groupId>commons-lang</groupId>
+				<artifactId>commons-lang</artifactId>
+				<version>2.1</version>
+			</dependency>
+		</dependencies>
+		
+	GOALS
+		- clean
+		- compile
+		- package
+		- install
+			- runs the package and copy your .jar to the local repo
+		- deploy
+			- runs install and install in a corporate repo
+		- daisy chain goals
+			"mvn clean compile package" 
+			
+	DEFAULTS - OVERRIDING
+		- build section
+		
+MAVEN DEPENDENCIES
+	- just list the dependency you want
+	- maven will pull transitive dependencies
+	- need 3 things:
+		<dependencies>
+			<dependency>
+				<groupId>commons-lang</groupId>
+				<artifactId>commons-lang</artifactId>
+				<version>2.1</version>
+			</dependency>
+		</dependencies>
+		
+		- version
+			- start as a SNAPSHOT
+				myapp-1.0-SNAPSHOT.jar
+			- changes aways downloead
+			- saves from rereleasing
+			- never deploy to production from SNAPSHOT
+		- types
+			- jar, war, rar etc
+		- scope
+			- compile - default - artifacts avaliable everywhere
+			- provided 
+			- runtime
+			- test
+			- system (not use)
+			- import
+			
+REPOSITORIES
+	- dependencies repo
+	- plugin repo
+	- releases/snapshots
+	- default
+		http://repo.maven.apache.org/maven2/
+	- multiple repos allowed
+	- corporate repo
+		nexus
+		artifactory
+	
+DEPENDENCIES REPOSITORIES
+	
+	- download dependencies
+	
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>3.2.0.BUILD-SNAPSHOT</version>
+		</dependency>
+		
+	needs
+	
+		<repositories>
+			<repository>
+				<id>spring-snapshot</id>
+				<name>Spring Maven SNAPSHOT repository</name>
+				<url>http://repo.springsource.org/libs-snapshot</url>
+				<snapshots>
+					<enabled>true</enabled>
+				</snapshots>
+				<releases>
+					<enabled>false</enabled>
+				</releases>
+			</repository>
+		</repositories>
+		
+PLUGIN REPOSITORIES
+	- download plugins
+	
+		<pluginRepositories>
+			<repository>
+				<id>acme-corp</id>
+				<name>Acme internal plugin repo</name>
+				<url>http://acmecorp.org/plugin</url>
+				<snapshots>
+					<enabled>true</enabled>
+				</snapshots>
+				<releases>
+					<enabled>true</enabled>
+				</releases>
+			</repository>
+		</pluginRepositories>	
+		
+RELEASES/SNAPSHOTS
+	- usually diferents repositories
+	
+MAVEN PLUGINS
+	- goals
+	- phases
+	- compiler plugin
+	- jar plugin
+	- sources plugin
+	- javadoc plugin
+
+GOLS
+	- are plugins, clean for ex:
+	<plugin>
+	  <artifactId>maven-clean-plugin</artifactId>
+	  <version>2.5</version>
+	  <executions>
+		<execution>
+		<id>default-clean</id>
+		<phase>clean</phase>
+		<goals>
+		  <goal>clean</goal>
+		</goals>
+		</execution>
+	  </executions>
+	</plugin>
+	- are tied to a phase (clean in this case)
+	
+PHASES
+	- validate
+		validation of project (structure etc)
+	- compile
+		compile source
+	- test
+		test the compiled source
+	- package
+		package the code, i.e JAR 
+	- integration-test
+		deploy and run integration tests
+	- verify
+		rutn checkes against package to verify integrity
+	- install
+		install package in local repo
+	- deploy
+		copy final repo to a remote 
+		
+phase 1
+	plugin1
+	plugin2
+phase 2	
+	plugin3
+	plugin4
+
+COMPILER PLUGIN
+	- compile and test the code
+	- run JAVAC (with dependencies)
+	- default java 1.5
+	- allow configuration <configuration> like memory, fork, target etc
+	
+JAR PLUGIN
+	- package code into a JAR
+	- package phase
+	- allow configuration <configuration> like defaltManifest
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-jar-plugin</artifactId>
+			<version>2.4</version>
+			<configuration>
+				<useDefaultManifestFile>true</useDefaultManifestFile>
+			</configuration>
+		</plugin>	
+		
+SOURCE PLUGIN
+	- attach the source code in the JAR
+	- package phase
+		often overhidden to a later phase (performance), verify for ex:
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-source-plugin</artifactId>
+			<version>2.2.1</version>
+			<executions>
+				<execution>
+					<id>attach sources</id>
+					<phase>verify</phase>
+					<goals>
+						<goal>jar</goal>
+					</goals>
+				</execution>
+			</executions>
+		</plugin>
+		
+JAVADOC PLUGIN
+	- attach javadoc to the jar
+	- package phase
+		often overhidden to a later phase (performance), verify for ex:
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-javadoc-plugin</artifactId>
+			<version>2.2.1</version>
+			<executions>
+				<execution>
+					<id>generate javadoc</id>
+					<phase>verify</phase>
+					<goals>
+						<goal>jar</goal>
+					</goals>
+				</execution>
+			</executions>
+		</plugin>		

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <title>Teste</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    </head>
+    <body ng-controller="AppController">
+        <div class="container-fluid">
+            <div class="row">
+
+                <ul class="list-unstyled" ng-repeat="item in lista">
+                    <li >
+                        <input type="button" class="btn btn-default" name="name" value="+" ng-click="visible = !visible">
+                        {{item}}
+                    </li>
+                    <li class="" ng-show="visible">
+                        {{'Detalhe ' + item}}
+                    </li>
+                </ul
+
+                <input type="date" name="name" ng-model="valor"></input>
+                <input type="button" class="btn btn-default" name="name" value="teste" ng-click="adicionaValor(valor)"></input>
+            </div>
+            <div class="row">
+              <ul class="list-unstyled" ng-repeat="item in lista">
+                  <li>
+                      {{'Detalhe ' + item}}
+
+                      <div class="card card-block">
+                        <h4 class="card-title">{{item}}</h4>
+                        <p class="card-text">{{'Detalhe ' + item}}</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                      </div>
+                  </li>
+              </ul
+
+            </div>
+
+        </div>
+    </body>
+    <script src="angular.min.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+
+    <!-- bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</html>

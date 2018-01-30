@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>Teste</title>
+        <link href="style.css" rel="stylesheet"/>
+        <script src="angular.min.js" charset="utf-8"></script>
+    </head>
+    <body ng-controller="AppController as ctrl">
+
+        <div class="container">
+            <meta name="nome" content="content">
+            <header>
+								<h1>Debitar</h1>
+            </header>
+            <nav>menu</nav>
+            <div class="conteudo">
+                <ul ng-repeat="pessoa in pessoas" style="border:1px solid blue;">
+									<li style="border:1px solid black;">{{pessoa.nome}}</li>
+                </ul>
+
+            </div>
+            <footer>footer</footer>
+        </div>
+
+        <script src="app.js" charset="utf-8"></script>
+    </body>
+</html>

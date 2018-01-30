@@ -1,0 +1,131 @@
+Attributes that influence design
+	Audience: age, gender, Race, cultural gender
+	Tone : Casual, formal, frendly, sarcastic
+	Purpose : informational, conversions
+
+style guide
+	
+FONT - Typography
+    choose a good font style
+	typeface classification
+		serif - edge of font, strokes
+		sans-serif
+		script
+		
+	choose 2 styles, 1 for title, other for content
+	keep the same or modify a lot  - strive for CONTRAST
+	
+	Font Size, Leading & Weights
+		Headline - 200 - 300% of body copy
+		subtitle - --150% of body copy
+		navigation - 100% of body copy
+		body copy - 16px;
+		leading (space between lines)  -- 120 - 150% of bc css line-height : 1.5%
+		50 - 70 cpl (characters per line) - css max-width
+		   mobile - 40-45 cpl
+		   
+
+COLOR
+	colors you can touch
+		subtractive color
+		C ian (light blue)
+		M agenta (light pink)
+		Y ellow
+		K
+		
+		SUM = Black
+		
+	colors you can't touch
+		adictive color
+		R ed
+		G reen
+		B lue
+		
+		Sum = White
+		
+	HSL - Human
+	Hue
+	Saturation
+	lightness
+	
+	Color Scheme
+		4 or 5 colors 
+		
+		Select a Base Color
+			Red - heat, passion, Excitement (gab atention, energy)
+			orange - warmth, Vitality (reliability, playfullness)
+			yellow - optimism, creativity (sunshine, chear)
+			green - serenity, health (nature, freshness)
+			blue - security, truth, stability(loyalty, reliability, comunication)
+			purple - spirituality, intelligence, wealth
+			pink - youthfulll ( fun, excitement)
+			brown - durability, class(age, stability)
+			black - power, drama(serious, bold, strong)
+			white - simplicity, cleanliness
+			
+			culture matters
+			
+		build scheme around base color
+			monochromatic
+				constant hue, variable saturation and lighteness
+			analogous
+				Analogous color schemes require you have colors with hues that both ascend and descend equally on either side of the base color. 
+				They also should be less than 40 degrees from the base
+			complementary
+				same hue on one side (change light, saturation) , opposite hue on the other side
+			
+			
+		Contrast
+			in hue
+			in saturation
+			in lightness
+			multi-faceted
+			standards
+				WCAG 2 WEb content Acessibility Guidelines
+	
+	
+LAYOUTS
+	Visual hierarchy
+	reading
+		left - right
+		top-botton
+		
+	logo navigation
+		navigation
+	navigation
+	
+	horizontal navigation is more common
+	
+	main content
+		everything pointing to the content
+		
+	secondary content
+		smaller
+	
+	footer
+	
+	Grid
+		divide the content in columns
+		dont put things between the columns
+		
+	Whitespaces
+		
+	
+	balance
+		symmetry
+		asymmetry
+		
+LInks
+	smashing magazine
+	.net magazine
+	hackdesign course
+	thinking with type
+	book - elements of typographic style
+	webtypography.net
+	Golden ratio typography calculator
+	smashing magazine - color theory
+	adobe kuler
+	understanding the z layout in web design
+	gridpack.com
+	photoshop grids
+	

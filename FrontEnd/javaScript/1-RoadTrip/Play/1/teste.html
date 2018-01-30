@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		h1   {color:blue}
+		p    {color:green}
+	</style>
+
+	<script type="text/javascript">
+		var vehicle3 = {
+		  type: "Submarine", capacity: 8, storedAt: "Underwater Outpost",
+		  ranger1: {name: "Gregg Pollack", skillz: "Lasering", dayOff: "Friday"},
+		  ranger2: {name: "Bijan Boustani", skillz: "Working", dayOff: "Saturday"},
+		  ranger3: {name: "Ashley Smith", skillz: "Torpedoing", dayOff: "Friday"},
+		  ranger4: {name: "Mark Krupinski", skillz: "Sniping", dayOff: "Wednesday"},
+		  numrangers: 4
+		};
+
+		function relieveDuty(vehicle, day){
+		  var offDuty = [];
+		  var onDuty = [];
+		  for (var i = 1; i <= vehicle.numrangers; i++){
+			if (vehicle["ranger" + i].dayOff == day){
+			  offDuty.push(vehicle["ranger" + i]);
+			}else{
+			  onDuty.push(vehicle["ranger" + i]);
+			}
+				delete vehicle["ranger" + i];
+		  }
+		  vehicle.numrangers -= offDuty.length;
+		  for (i = 0; i <= offDuty.length -1; i++){
+			vehicle["ranger" + (i + 1)] = {name: offDuty[i].name, skillz: offDuty[i].skillz, dayOff:offDuty[i].dayOff};
+		  }  
+		  return offDuty;
+		}
+
+		var offToday = relieveDuty(vehicle3, "Friday");		
+	</script>
+</head>
+
+<body>
+	<div style="width:100%; float:center;" >
+		<textarea style="width:500px; height:200px;" id="holder">
+		This is line 1
+		This is line 2
+		This is line 3
+		</textarea>
+		
+		<h1>This is a heading</h1>
+		<h2>This is a heading</h2>
+		<h3>This is a heading</h3>
+		
+		<p>This is a paragraph</p>
+		<p>This is another paragraph</p>	
+		<a href="http://www.w3schools.com/html/">
+		  <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
+		</a>		
+		
+<table style="width:100%; border: 1px solid black;">
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td> 
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td> 
+    <td>94</td>
+  </tr>
+</table>		
+		
+<pre>
+  My Bonnie lies over the ocean.
+
+  My Bonnie lies over the sea.
+
+  My Bonnie lies over the ocean.
+
+  Oh, bring back my Bonnie to me.
+</pre>		
+		
+	</div>
+	<div style="width:100%" >
+		<button type="button" onclick="offToday()">Click Me!</button>
+	</div>
+</body>
+
+</html>
+
+
+

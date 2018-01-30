@@ -1,0 +1,1 @@
+gedit ~/.local/share/applications/opt_eclipse.desktop

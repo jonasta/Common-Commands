@@ -1,0 +1,11 @@
+Bot
+	app that do automated task
+	User >> Channel(FB, slack...) >> Bot
+Why
+	future/
+MS Bot Framework
+	framework that encapsulate all bot funcionality, with natural language support
+First Bot
+	channel >> channel json >> connector services >> activitie json >> bot
+	
+	

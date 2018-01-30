@@ -1,0 +1,82 @@
+HTML
+	<!DOCTYPE html>
+	<html>
+		<head>
+		</head>
+		<body>
+		</body>
+	</html>
+
+	<h1><h2><h3...> //titulos, enfase
+	<p> //paragrafo
+	<ul> //unordered list, lista n�o ordenada
+	<ol> //orderede list, lista ordenada
+		<li></li>
+		<li></li>
+		<li></li> //list item
+	</ol>
+	<a href="pagina.html"></a> //anchor
+
+
+THE BOX MODEL
+	Block Level Tags - entire line
+		h1, h2, h3, p, ul, li
+		
+	Inline level tags
+		a, img, input, label
+		
+	- Content Area 
+		- Padding  : Top, right, left, right : alter box size without change content : between content and border/margin	
+			- Border : width, style, color (6px, solid, black)
+				- Margin : igual padding : space between boxes
+
+START STYLING FROM THE MORE IMPORTANT, FIRST ELEMENTS, THEN CLASSES
+ - body, h1, h2, .class1, .class2 .class3...
+
+CENTERING CONTENT
+	block level tag - fixed width = use margin 0 auto 0 auto
+	children content inside block level tag(even other block level tags) = use text-align :center
+	
+BACKGROUND-IMG
+	background: #555555 url(images/bg-tile.png) top left repeat;
+		
+FONTS
+	font-family : arial, helvetica...;
+	
+FORMS
+     <form>
+        <label for="band-name">Band Name</label>
+        <input type="text" id="band-name">
+        <label for="your-story">Your Story</label>
+        <textarea id="your-story"></textarea>
+        <label for="on-tour">On Tour</label>
+        <input type="checkbox" id="on-tour">
+        
+        
+        <input type="submit" value="Tell us about your band">
+      </form>
+        
+   
+ATTRIBUTE SELECTOR
+ .input[type=text]{}
+ 
+ 
+Mozilla developers network
+https://developer.mozilla.org/en-US/docs/Web/HTML
+
+Mozilla Developer Network - CSS
+https://developer.mozilla.org/en-US/docs/Web/CSS
+
+Shay Howe's Learn to Code HTML & CSS
+http://learn.shayhowe.com/
+
+CodePen
+http://codepen.io/
+
+Front-End Formations
+CSS Cross Country
+Journey Into Mobile
+Fundamentals of Design
+Soup to Bits: Front-end Foundations	
+
+ 
