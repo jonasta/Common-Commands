@@ -64,7 +64,7 @@ heroku keys
 	heroku keys:clean
 	keroku keys: remove joe@joe-i7
 	in WINDOWS
-		copy keys to git/.ssh o
+		copy keys to git/.ssh
 		
 		
 		
