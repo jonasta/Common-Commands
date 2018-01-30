@@ -126,12 +126,20 @@ db.users.remove({})
 mongodb://admin:admin@ds161164.mlab.com:61164/multivision	
 mongo mongodb://localhost/multivision
 	
+//GIT - basic
+git add -A & git commit -m 'comment' & git push
+//stage 
+git add -A -- src/app/cliente/cliente.service.ts
+//unstage
+git reset -q HEAD -- src/app/cliente/cliente.service.ts
+//ignore changes
+git checkout -q -- src/app/cliente/cliente.service.ts
 //GIT - branches
-	git checkout -b iss53
-	..changes
-	git commit -a -m 'added a new footer [issue 53]'
-	git checkout master
-	git merge iss53
+git checkout -b iss53
+... do some changes
+git commit -a -m 'added a new footer [issue 53]'
+git checkout master
+git merge iss53
 //GIT - remotes
 git remote -v
 //GIT - remove branch
@@ -286,3 +294,21 @@ curl -H "Content-Type: application/json" -H "X-Parse-Application-Id: myAppId" ht
 curl -H "Content-Type: application/json" -H "X-Parse-Application-Id: myAppId" -X POST http://localhost:1337/parse/classes/GameScore -d "{\"score\":123,\"playerName\":\"Sean Plott\",\"cheatMode\":false}"
 
 	
+	
+	
+function almostIncreasingSequence(seq) {
+    var erased = 0;
+    return seq.every((n, i) => {
+        if (n <= seq[i-1]) {
+            if (++erased > 1) return false;
+            else if (
+                (seq[i-2] >= n || n >= seq[i+1]) &&
+                (seq[i-2] >= seq[i-1] || seq[i-1] >= seq[i+1]) &&
+                i > 1 && i + 1 < seq.length
+            ) return false;
+        }
+        return true
+    });
+}
+	
+	3 4  5 1 
