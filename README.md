@@ -20,7 +20,7 @@ mongodb://admin:admin@ds161164.mlab.com:61164/multivision
 mongo mongodb://localhost/multivision
 	
 //GIT - basic
-git add -A & git commit -m 'comment' & git push
+git add -A & git commit -m "general changes" & git push origin master
 //stage 
 git add -A -- src/app/cliente/cliente.service.ts
 //unstage
@@ -65,3 +65,7 @@ heroku keys
 	keroku keys: remove joe@joe-i7
 	in WINDOWS
 		copy keys to git/.ssh o
+		
+		
+		
+		
