@@ -66,6 +66,8 @@ heroku keys
 	in WINDOWS  
 		copy keys to git/.ssh  
 		  
-		  
-		  
-		  
+## pug
+	npm i --save-dev pug apply-loader pug-loader
+	rules do webpack.config.js
+	add
+		{ test: /.(pug|jade)$/, loader: "apply-loader!pug-loader?self" }
