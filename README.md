@@ -64,10 +64,13 @@ heroku keys
 	keroku keys: remove joe@joe-i7  
 	in WINDOWS  
 		copy keys to git/.ssh  
-		
   
 ## OTHERS  
 * [Quick Start](https://reactjs.org/docs/hello-world.html)		  
 		  
 		  
-		  
+## pug
+	npm i --save-dev pug apply-loader pug-loader
+	rules do webpack.config.js
+	add
+		{ test: /.(pug|jade)$/, loader: "apply-loader!pug-loader?self" }
