@@ -68,7 +68,7 @@ heroku keys
 ## OTHERS  
 * [Quick Start](https://reactjs.org/docs/hello-world.html)		  
 		  
-		  
+sss1		  
 ## pug
 	npm i --save-dev pug apply-loader pug-loader
 	rules do webpack.config.js
