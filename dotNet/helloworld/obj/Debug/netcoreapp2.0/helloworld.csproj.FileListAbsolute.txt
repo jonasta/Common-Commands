@@ -8,3 +8,4 @@ C:\Users\Jota\Google Drive\dev\dotNet\helloworld\obj\Debug\netcoreapp2.0\hellowo
 C:\Users\Jota\Google Drive\dev\dotNet\helloworld\obj\Debug\netcoreapp2.0\helloworld.AssemblyInfo.cs
 C:\Users\Jota\Google Drive\dev\dotNet\helloworld\obj\Debug\netcoreapp2.0\helloworld.dll
 C:\Users\Jota\Google Drive\dev\dotNet\helloworld\obj\Debug\netcoreapp2.0\helloworld.pdb
+C:\Users\Jota\Google Drive\dev\dotNet\helloworld\obj\Debug\netcoreapp2.0\helloworld.csprojResolveAssemblyReference.cache

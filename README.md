@@ -1,5 +1,4 @@
-# fuc  
-## FUC - Frequend used commands  
+# FUC - Frequend used commands  
   
 ## PROMPT  
 ## port - proccess  
@@ -65,7 +64,10 @@ heroku keys
 	keroku keys: remove joe@joe-i7  
 	in WINDOWS  
 		copy keys to git/.ssh  
-		  
+		
+  
+## OTHERS  
+* [Quick Start](https://reactjs.org/docs/hello-world.html)		  
 		  
 		  
 		  

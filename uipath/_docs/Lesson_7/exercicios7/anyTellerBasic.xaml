@@ -1,0 +1,154 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Main_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Core.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart sap2010:WorkflowViewState.IdRef="Flowchart_1" StartNode="{x:Reference __ReferenceID0}">
+    <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_4">
+      <Sequence DisplayName="Recording Sequence" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'WindowsXP Qt5qwindo'" InformativeScreenshot="ba4a504160250fb8754e1eeb4e76e8da" Selector="&lt;wnd app='virtualbox.exe' cls='Qt5QWindowIcon' title='Windows XP [Executando] - Oracle VM VirtualBox' /&gt;">
+          <ui:WindowScope.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do">
+                <ui:ClickOCRText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click OCR text 'Qt5QWindowIcon'" KeyModifiers="None" MouseButton="BTN_LEFT" Occurrence="1" SendWindowMessages="False" Text="Decimal symbol:">
+                  <ui:ClickOCRText.CursorPosition>
+                    <ui:CursorPosition OffsetX="120" OffsetY="10" Position="TopRight" />
+                  </ui:ClickOCRText.CursorPosition>
+                  <ui:ClickOCRText.OCREngine>
+                    <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                      <ActivityFunc.Argument>
+                        <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                      </ActivityFunc.Argument>
+                      <ui:MicrosoftOCR FilterRegion="{x:Null}" Text="{x:Null}" DisplayName="Microsoft OCR" ExtractWords="True" Image="[Image]" Language="Inglês (Estados Unidos)" Profile="Screen" Scale="1" />
+                    </ActivityFunc>
+                  </ui:ClickOCRText.OCREngine>
+                  <ui:ClickOCRText.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="231ef4f9da251134d117fb7466c16f70" Selector="&lt;wnd cls='Qt5QWindowIcon' title='QWidgetClassWindow' /&gt;&lt;wnd cls='Qt5QWindowIcon' title='UIMachineViewNormalClassWindow' /&gt;&lt;wnd cls='Qt5QWindowIcon' title='qt_scrollarea_viewportWindow' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:ClickOCRText.Target>
+                </ui:ClickOCRText>
+                <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type into 'Qt5QWindowIcon'" EmptyField="False" SendWindowMessages="False" SimulateType="False" Text="[k(back)]1111">
+                  <ui:TypeInto.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="4e8aa34aa6092326d70889c1fc925608" Selector="&lt;wnd cls='Qt5QWindowIcon' title='QWidgetClassWindow' /&gt;&lt;wnd cls='Qt5QWindowIcon' title='UIMachineViewNormalClassWindow' /&gt;&lt;wnd cls='Qt5QWindowIcon' title='qt_scrollarea_viewportWindow' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:TypeInto.Target>
+                </ui:TypeInto>
+                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click image 'Qt5QWindowIcon'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                  <ui:ClickImage.CursorPosition>
+                    <ui:CursorPosition OffsetX="78" OffsetY="15" Position="TopRight" />
+                  </ui:ClickImage.CursorPosition>
+                  <ui:ClickImage.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHwAAAAUCAYAAABPuVmJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMSSURBVGhD7ZfJbsMwDET9/9/bJrmlHFIjjWjJdlM0QAwfCHF5HNJb0C6P++35eJjdv8t5e97tvHvecrXO8+I+mVtaElBrRuzNbLi4U3DxhbuhCUnGYmxyu7hqH8iVLxwN9maYj7cj3hAADV6WpbPMIdd61npeF72jc/+D467vnjvifntf9u5zq6nfuMUhAqV4d4Ai0dQtVuIRt6dHnaNzz87FfTyu99f7Z194hiIOgdJgvg9KXOR6bk+PPUfnnp1rD/yY3l/vnz9wb3CzpAPMWRPqZrFYz7VcWRy9Ja+GnjiDcx+6Az01zZHTOmLOUz3EM73KDzjqTXutR+9LraW59PO+4KovnFq+Dhrnul9mk0N+tJ/nRM/76xvisIFuAKOJsQ4ghxw59wec5pXLc5nf0otc7OM/TyUOpulpXq+DXNSDo39Ej1y+DvrKuT/hVj1lP8aYGydycz29f3k/xpmzBx4BoFYszX6GcZByNVfra67PtzPPZX5LD77up4zqMa69zjfO8y/okct6I061cCLvvnGj+0KLmFrteWRe5yqn+404+7cMjpklAmZD+BSLBXqOy9EfcVyQLOvwRxx85XiCowa5qDXtzDUetbTDC3p790U5+qxX3zj6ymU95sPGepyrHH3qZc6/cBZq0f1oZqyDvLHGerPmHE6NaZnb0tNe3gRl6Gter6PP930zvRGXc/CRYz7ifU5zyszyWQ9GvRa361UjV37SA3rcItmAeEtgGKSWOV0ks8xRj7k8V3vI4FRO66P9qDPTa5rtRI5x1qMpp9cRtX4/5RiTzxxOtegNPc1nvcjtPzfV87kNUmCde5Vry25zGsN4YXsccyNOZ29xjGccd9nj4L96ve/iVg+cfhfbm3GUwwWrzTjVyD2038wdca4h8VG9vMeMUz2ye1yXz/EbuPLAv2oB58pq48V19oGc/5U+bTAwanFeHO1zuYWfvRfNf9wA2RvhPuDSdHGn4BYASHgRDcV3iDDOizsFF/+HeyHeiOrb6ZD5eDsu7hyc/aRHwc/SQND9JHBxn8x9PX8ALCGVFiUtNZAAAAAASUVORK5CYII=" />
+                  </ui:ClickImage.Image>
+                  <ui:ClickImage.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                  </ui:ClickImage.Target>
+                </ui:ClickImage>
+                <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type into 'Qt5QWindowIcon'" EmptyField="False" SendWindowMessages="False" SimulateType="False" Text="[k(back)]22222">
+                  <ui:TypeInto.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="390288cedf312aa228ca4f838dc7cfc2" Selector="&lt;wnd cls='Qt5QWindowIcon' title='QWidgetClassWindow' /&gt;&lt;wnd cls='Qt5QWindowIcon' title='UIMachineViewNormalClassWindow' /&gt;&lt;wnd cls='Qt5QWindowIcon' title='qt_scrollarea_viewportWindow' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:TypeInto.Target>
+                </ui:TypeInto>
+                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click image 'Qt5QWindowIcon'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                  <ui:ClickImage.CursorPosition>
+                    <ui:CursorPosition OffsetX="0" OffsetY="0" Position="Center" />
+                  </ui:ClickImage.CursorPosition>
+                  <ui:ClickImage.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADwAAAAcCAYAAAA9UNxEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEjSURBVFhH7djPSsNAEAbw78F8LJ+w4MGbp9BDQfEgaNOaP22Macm4QxlYl9FmNySFTgM/2H4z5cteg/x9SZbcLnzt8LJ6pLmtssXFAHf3ZAoZe9D3PVmC4/FAlqDrvskStG1DlqBpakoF4BdtZwpjutyFK3eIdyo9n01hTA/2+5JScKmWz2FMN3a7glJwqZYLngs/82eS+9mQPNyJgbr+pBRcquUa2ZUX13LJUvIY7sJbd4h3KtVnjOc+ycIdLRfyX5/k4e5QqKoNpeBSLWfhTH4PzUVsPgTKckMpuPSvLJxNncdwF87dIQ0X+87NtB3/7O/+l4c7MVAUa7LEXfjDHexAvn4jS/D6nJElyJ4eyBJ737Tar4Lm1nXNxdw+xF+3Jf0AL23kzWd1wCoAAAAASUVORK5CYII=" />
+                  </ui:ClickImage.Image>
+                  <ui:ClickImage.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                  </ui:ClickImage.Target>
+                </ui:ClickImage>
+              </Sequence>
+            </ActivityAction>
+          </ui:WindowScope.Body>
+        </ui:WindowScope>
+      </Sequence>
+    </FlowStep>
+    <sads:DebugSymbol.Symbol>d1RDOlxVc2Vyc1xKb3RhXEdvb2dsZSBEcml2ZVxkZXZcdWlwYXRoXF9kb2NzXExlc3Nvbl83XGV4ZXJjaWNpb3M3XGFueVRlbGxlckJhc2ljLnhhbWwdOgN7DwIBATwHeBICAQI9CXcaAgEDPegBPdgCAgEeQw90GgIBBEQRUyMCARNUEVgfAgEQWRFjIQIBDGQRaB8CAQlpEXMhAgEFRIgCRJkCAgEaROQBROcBAgEZUaQBUfMCAgEdRjBGNQIBG0Y+RkICARxNF03QAQIBFFakAVbzAgIBElT/AVSOAgIBEV4/XkQCAQ9bMFs0AgENWz1bQQIBDmakAWbzAgIBC2T/AWSPAgIBCm4/bkQCAQhrMGszAgEGazxrPwIBB03KAU3NAQIBGE2GAU2PAQIBFk2ZAU2yAQIBFQ==</sads:DebugSymbol.Symbol>
+  </Flowchart>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="Sequence_6" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_4">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">30,100</av:Point>
+            <av:Size x:Key="ShapeSize">200,51</av:Size>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Flowchart_1" sap:VirtualizedContainerService.HintSize="614,636">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+            <av:Size x:Key="ShapeSize">60,75</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,125.5 230,125.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="654,716" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

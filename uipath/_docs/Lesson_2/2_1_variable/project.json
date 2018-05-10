@@ -1,0 +1,16 @@
+{
+  "name": "leitor_planilha",
+  "description": "Project",
+  "main": "C:\\Users\\Jota\\Google Drive\\dev\\uipath\\projetos\\leitor_planilha\\flowchart.xaml",
+  "dependencies": {
+    "UiPath.Core.Activities": "18.1.6659.10070"
+  },
+  "excludedData": [
+    "Private:*",
+    "*password*"
+  ],
+  "toolVersion": "18.1.3.7",
+  "projectVersion": "1.0.6667.30698",
+  "packOptions": {},
+  "runtimeOptions": {}
+}
