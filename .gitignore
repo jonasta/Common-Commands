@@ -13,3 +13,4 @@ webstorm
 Workspace
 Xports
 */node_modules
+*/.vs

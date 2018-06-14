@@ -39,6 +39,7 @@ ASSEMBLIES
 	right click in references > view in object browser
 	
 UNIT TEST
+	New Test Project
 	[TestClass]
 	public class GradeBookTests{
 		[TestMethod]
@@ -46,10 +47,9 @@ UNIT TEST
 	}
 
 TYPES
-	passing as reference/value
-	reference
+	#reference
 		class, string, array //changes reference, except when "obj = new obj"
-	value
+	#value
 		struct, int... // do NOT change original var
 		
 Methods
@@ -116,3 +116,7 @@ OBJECT ORIENTED PROGRAMMING
 	
 	testable code
 	validation, exception handling
+	
+	
+**	
+	
