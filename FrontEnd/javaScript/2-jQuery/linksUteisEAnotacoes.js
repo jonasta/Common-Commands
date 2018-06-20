@@ -20,7 +20,7 @@ TRABALHA COM SELECIONAR->MODIFICAR
             $("#lista li:first") $("#lista li:last") $("#lista li:odd") $("#lista li:even")
 			
 	PROPRIEDADES
-		$("elemento).attr("atributo");//retorna atributo
+		$("elemento").attr("atributo");//retorna atributo
 		            .prop("propriedade");//retorna propriedade
 					.removeAttr();//remove atributo
 					.removeProp();//remove propriedade
