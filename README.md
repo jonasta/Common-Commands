@@ -10,7 +10,7 @@ for /D %f in (folderName*) do rd /s /q "%f"
 xcopy /y /s dist\* ..\CadastroAPP_DIST  
 
 ## copy files from subfolders  
-@for /D %I in (*) do @if exist "%I\*.ttf" move "%I\*.ttf" "%cd%"
+@for /D %I in (*) do @if exist "%I\\*.ttf" move "%I\\*.ttf" "%cd%"
   
 ## MONGODB  
 use xxx  
