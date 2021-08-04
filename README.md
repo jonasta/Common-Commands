@@ -1,4 +1,4 @@
-# FUC - Frequend used commands  
+# Commonly used commands  
   
 ## PROMPT  
 ## port - proccess  
