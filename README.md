@@ -24,7 +24,8 @@ mongo mongodb:## localhost/multivision
 ## GIT - basic  
 git add -A & git commit -m "general changes" & git push origin master  
 ## stage   
-git add -A -- src/app/cliente/cliente.service.ts  
+git add -A -- src/app/cliente/cliente.service.ts
+git add .
 ## unstage  
 git reset -q HEAD -- src/app/cliente/cliente.service.ts  
 ## ignore changes  
