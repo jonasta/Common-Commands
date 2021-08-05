@@ -45,6 +45,8 @@ git push origin --delete the_remote_branch
 git reset  
 ## git remove from repo but keep disk  
 git rm --cached -r somedir  
+## git clean credentials
+git config --local credential.helper ""
    
 ## NODE_ENV  
 set NODE_ENV=production	  
