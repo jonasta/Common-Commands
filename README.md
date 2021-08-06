@@ -1,33 +1,25 @@
 # Commonly used commands  
   
-## PROMPT  
-## port - proccess  
+## CMD  
+## view port - proccess  
 netstat -aon |find /i "8081"  
 or resmon.exe  
 ## delete all folders  
 for /D %f in (folderName*) do rd /s /q "%f"  
 ## copy folder  
-xcopy /y /s dist\* ..\CadastroAPP_DIST  
-
+xcopy /y /s dist\* ..\CadastroAPP_DIST 
 ## copy files from subfolders  
 @for /D %I in (*) do @if exist "%I\\*.ttf" move "%I\\*.ttf" "%cd%"
   
-## MONGODB  
-use xxx  
-db  
-show collections  
-db.GameScore.find()  
-db.users.remove({})  
-mongodb:## admin:admin@ds161164.mlab.com:61164/multivision	  
-mongo mongodb:## localhost/multivision  
-	  
-## GIT - basic  
+## GIT 
 git add -A & git commit -m "general changes" & git push origin master  
 ### stage   
 git add -A -- src/app/cliente/cliente.service.ts
 git add .
 ### unstage  
 git reset -q HEAD -- src/app/cliente/cliente.service.ts  
+### undo stage "add"  
+git reset  
 ### ignore changes  
 git checkout -q -- src/app/cliente/cliente.service.ts  
 ### branches  
@@ -36,24 +28,19 @@ git checkout -b iss53
 git commit -a -m 'added a new footer [issue 53]'  
 git checkout master  
 git merge iss53  
-### GIT - remotes  
+### view remotes  
 git remote -v  
-### GIT - remove branch  
+### remove branch  
 git branch -d the_local_branch  
 git push origin --delete the_remote_branch  
-### git undo "add"  
-git reset  
 ### git remove from repo but keep disk  
 git rm --cached -r somedir  
-### git clean credentials
+### git clean default credentials
 git config --local credential.helper ""
 ### set specific credential
 git config user.name "FIRST_NAME LAST_NAME" (--global)
 git config user.email "MY_NAME@example.com" (--global)
    
-## NODE_ENV  
-set NODE_ENV=production	  
-  
 ## HEROKU  
 heroku login  
 heroku create  
@@ -76,9 +63,4 @@ heroku keys
   
 ## OTHERS  
 * [React Quick Start](https://reactjs.org/docs/hello-world.html)		  
-		  
-## pug
-	npm i --save-dev pug apply-loader pug-loader
-	rules do webpack.config.js
-	add
-		{ test: /.(pug|jade)$/, loader: "apply-loader!pug-loader?self" }
+	
