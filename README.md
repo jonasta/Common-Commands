@@ -1,25 +1,25 @@
 # Commonly used commands  
   
 ## CMD  
-## view port - proccess  
+### view port - proccess  
 netstat -aon |find /i "8081"  
 or resmon.exe  
-## delete all folders  
+### delete all folders  
 for /D %f in (folderName*) do rd /s /q "%f"  
-## copy folder  
+### copy folder  
 xcopy /y /s dist\* ..\CadastroAPP_DIST 
-## copy files from subfolders  
+### copy files from subfolders  
 @for /D %I in (*) do @if exist "%I\\*.ttf" move "%I\\*.ttf" "%cd%"
   
 ## GIT 
+### one liner
 git add -A & git commit -m "general changes" & git push origin master  
 ### stage   
 git add -A -- src/app/cliente/cliente.service.ts
 git add .
 ### unstage  
 git reset -q HEAD -- src/app/cliente/cliente.service.ts  
-### undo stage "add"  
-git reset  
+or git reset  
 ### ignore changes  
 git checkout -q -- src/app/cliente/cliente.service.ts  
 ### branches  
@@ -59,8 +59,5 @@ heroku keys
 	heroku keys:clean  
 	keroku keys: remove joe@joe-i7  
 	in WINDOWS  
-		copy keys to git/.ssh  
-  
-## OTHERS  
-* [React Quick Start](https://reactjs.org/docs/hello-world.html)		  
+		copy keys to git/.ssh  	  
 	
