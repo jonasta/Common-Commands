@@ -23,30 +23,33 @@ mongo mongodb:## localhost/multivision
 	  
 ## GIT - basic  
 git add -A & git commit -m "general changes" & git push origin master  
-## stage   
+### stage   
 git add -A -- src/app/cliente/cliente.service.ts
 git add .
-## unstage  
+### unstage  
 git reset -q HEAD -- src/app/cliente/cliente.service.ts  
-## ignore changes  
+### ignore changes  
 git checkout -q -- src/app/cliente/cliente.service.ts  
-## GIT - branches  
+### branches  
 git checkout -b iss53  
 ... do some changes  
 git commit -a -m 'added a new footer [issue 53]'  
 git checkout master  
 git merge iss53  
-## GIT - remotes  
+### GIT - remotes  
 git remote -v  
-## GIT - remove branch  
+### GIT - remove branch  
 git branch -d the_local_branch  
 git push origin --delete the_remote_branch  
-## git undo "add"  
+### git undo "add"  
 git reset  
-## git remove from repo but keep disk  
+### git remove from repo but keep disk  
 git rm --cached -r somedir  
-## git clean credentials
+### git clean credentials
 git config --local credential.helper ""
+### set specific credential
+git config user.name "FIRST_NAME LAST_NAME" (--global)
+git config user.email "MY_NAME@example.com" (--global)
    
 ## NODE_ENV  
 set NODE_ENV=production	  
