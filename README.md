@@ -40,6 +40,13 @@ git config --local credential.helper ""
 ### set specific credential
 git config user.name "FIRST_NAME LAST_NAME" (--global)
 git config user.email "MY_NAME@example.com" (--global)
+## list of files to be pushed
+git diff --stat --cached [remote/branch]
+## For the code diff of the files to be pushed
+git diff [remote repo/branch]
+## Full file paths of the files that will change, run:
+git diff --numstat [remote repo/branch]
+
    
 ## HEROKU  
 heroku login  
