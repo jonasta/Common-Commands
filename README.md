@@ -20,6 +20,9 @@ git add .
 ### unstage  
 git reset -q HEAD -- src/app/cliente/cliente.service.ts  
 or git reset  
+### Clean up untracked files
+git clean -n -d
+git clean -f -d
 ### ignore changes  
 git checkout -q -- src/app/cliente/cliente.service.ts  
 ### branches  
